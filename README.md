@@ -11,6 +11,17 @@
 - 改安装目录下 `config\config.toml` 后下一轮调度自动生效
 - 空闲时只做 15 秒一次的到期检查
 
+## 下载
+
+GitHub Actions 在每次推送到 `main` 后编译 Windows x64 包。打开仓库 **Actions → Build → 最新成功的 run → Artifacts**，下载 `WallShift-windows-x64.zip`。
+
+打 `v*` 标签会额外发到 Releases：
+
+```bash
+git tag v0.1.0
+git push origin v0.1.0
+```
+
 ## 在 Windows 上构建
 
 ```powershell
