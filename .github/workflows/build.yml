@@ -38,22 +38,27 @@ jobs:
           New-Item -ItemType Directory -Force -Path $out | Out-Null
           Copy-Item target/x86_64-pc-windows-msvc/release/wallshift.exe $out/
           Copy-Item scripts/install.ps1 $out/
+          Copy-Item scripts/install.cmd $out/
           Copy-Item scripts/uninstall.ps1 $out/
+          Copy-Item scripts/uninstall.cmd $out/
           Copy-Item config.example.toml $out/
           Copy-Item README.md $out/
           @"
           WallShift
 
-          Windows 10/11 x64. Run install.ps1 as Administrator in this folder.
+          Windows 10/11 x64. Right-click install.cmd -> Run as administrator.
 
           Layout after install:
             bin\wallshift.exe
             config\config.toml
             cache\
 
-          1. Right-click install.ps1 -> Run with PowerShell (Administrator)
+          1. Right-click install.cmd -> Run as administrator
           2. Edit config\config.toml to change sources and intervals
-          3. Uninstall: run uninstall.ps1 as Administrator
+          3. Uninstall: right-click uninstall.cmd -> Run as administrator
+
+          PowerShell (Administrator):
+            powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
 
           Commands (from bin\):
             wallshift.exe once

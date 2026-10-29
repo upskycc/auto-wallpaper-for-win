@@ -33,9 +33,16 @@ cargo build --release
 
 ## 安装
 
-解压 zip 后，在该目录用管理员身份运行 `install.ps1`。程序装到同目录 `bin\`，配置写到同目录 `config\config.toml`。
+解压 zip 后，右键 `install.cmd` → 以管理员身份运行。程序装到同目录 `bin\`，配置写到同目录 `config\config.toml`。
 
-卸载：管理员运行 `uninstall.ps1`。
+已打开管理员 PowerShell 时：
+
+```powershell
+Set-Location "D:\Program Files\WallShift-windows-x64"
+powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1
+```
+
+卸载：管理员运行 `uninstall.cmd`。
 
 ## 配置
 
