@@ -1,0 +1,14 @@
+[service]
+cache_dir = "cache"
+
+[wallpaper]
+enabled = true
+interval_minutes = 60
+selection = "random"
+sources = ["https://wp.upx8.com/api.php?resolution=3840x2160"]
+
+[lockscreen]
+enabled = true
+interval_minutes = 120
+selection = "random"
+sources = ["https://wp.upx8.com/api.php?resolution=3840x2160"]
